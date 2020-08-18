@@ -4,7 +4,7 @@
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](#)
 
-A lightweight real-time chat Web App made in Python & Django.
+A lightweight real-time chat app made in Python & Django.
 
 <p align="center">
   <img width="80%" src="https://github.com/nbcl/globalchat/blob/master/globalchat.png?raw=true">
