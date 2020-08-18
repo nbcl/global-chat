@@ -3,7 +3,6 @@
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://mit-license.org/)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](#)
-[![GitHub contributors](https://img.shields.io/github/contributors/Naereen/StrapDown.js.svg)](https://github.com/nbcl/globalchat/graphs/contributors/)
 
 A lightweight real-time chat Web App made in Python & Django.
 
