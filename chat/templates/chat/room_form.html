@@ -1,0 +1,32 @@
+{% extends 'chat/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% load static %}
+<style>
+.helptext{
+    display: none;
+}
+li{
+    display: none;
+}
+</style>
+<!-- Registration form -->
+<div class="col-md-12 d-flex justify-content-center" style=" width: 100%;">
+    <div class="col-md-8 align-self-center" style="margin-top: 4vh;">
+        <h3 style="color: black;">👋 New Room</h3>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset>
+                <!-- Renders form as crispy_forms model -->
+                {{ form|crispy }} 
+            </fieldset>
+            <div>
+                <button class="btn" type="submit">Create</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
+
+

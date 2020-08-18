@@ -1,0 +1,55 @@
+{% extends 'chat/base.html' %} {% load crispy_forms_tags %} {% block content %} {% load static %}
+<style>
+    .helptext {
+        display: none;
+    }
+    li {
+        display: none;
+    }
+</style>
+<h1 style="margin-left: 2vh; margin-top: 4vh">💬 Chat room {{room.name}}</h1>
+<div class="col-md-12 d-flex justify-content-center" style=" width: 100%;">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th style="width: 20%" scope="col">🧍Name</th>
+                <th scope="col">💬Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in comments %}
+            <tr>
+                <td><p style="font-weight: 600">@{{c.name}}</p>⏰{{c.date|date:"h:iA"}}</td>
+                <td>{{c.comment}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="col-md-12 d-flex justify-content-center" style=" width: 100%;">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th style="width: 20%" scope="col">New Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <fieldset>
+                            <!-- Renders form as crispy_forms model -->
+                            {{ form|crispy }}
+                        </fieldset>
+                        <div>
+                            <button class="btn" type="submit">Send</button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+{% endblock content %}
